@@ -17,3 +17,6 @@ If you use the code, plesae cite the following journal paper: <br>
   pages={097109}, <br>
   year={2021}, <br>
   publisher={AIP Publishing LLC}} <br>
+
+**Questions?** <br>
+If you have any questions or need assistance, please do not hesitate to contact Ali Kashefi (kashefi@stanford.edu) via email. 
