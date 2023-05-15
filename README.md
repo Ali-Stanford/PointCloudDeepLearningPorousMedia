@@ -1,5 +1,7 @@
 # Point-Cloud Deep Learning of Porous Media for Permeability Prediction
 
+![pic](./Fig_1_pointnetperm-1.png)
+
 **Authors:** Ali Kashefi (kashefi@stanford.edu) <br>
 **Description:** Implementation of PointNet for *supervised learning* of permeability of porous media using point clouds <br>
 **Version:** 1.0 <br>
