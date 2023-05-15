@@ -8,15 +8,15 @@
 If you use the code, plesae cite the following journal paper: <br>
 **[Point-cloud deep learning of porous media for permeability prediction](https://doi.org/10.1063/5.0063904)**
 
-@article{kashefi2021PointNetPorousMedia, <br>
-  title={Point-cloud deep learning of porous media for permeability prediction}, <br>
-  author={Kashefi, Ali and Mukerji, Tapan}, <br>
-  journal={Physics of Fluids}, <br>
-  volume={33}, <br>
-  number={9}, <br>
-  pages={097109}, <br>
-  year={2021}, <br>
-  publisher={AIP Publishing LLC}} <br>
+    @article{kashefi2021PointNetPorousMedia, 
+      title={Point-cloud deep learning of porous media for permeability prediction},
+      author={Kashefi, Ali and Mukerji, Tapan},
+      journal={Physics of Fluids}, 
+      volume={33}, 
+      number={9}, 
+      pages={097109},
+      year={2021}, 
+      publisher={AIP Publishing LLC}}
 
 **Questions?** <br>
 If you have any questions or need assistance, please do not hesitate to contact Ali Kashefi (kashefi@stanford.edu) via email. 
