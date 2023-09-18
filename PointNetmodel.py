@@ -59,6 +59,17 @@ class PermeabilityPointNet(Model):
         outputs = layers.Dense(self.num_classes, activation="sigmoid")(x)
         return outputs
 
-model = PermeabilityPointNet(num_points=NUM_POINTS)
+# Example usage
+model = PermeabilityPointNet(inputs=inputs, outputs=outputs,num_points=NUM_POINTS)
 model.build((None, NUM_POINTS, 3))
 model.summary()
+
+# Example usage
+#pointnet_model = PermeabilityPointNet(input_shape=(64, 64, 64, 1), category=1)
+#pointnet_model.summary()
+#model = pointnet_model.model 
+
+#model.compile(optimizers.Adam(lr=0.1, beta_1=0.9, beta_2=0.999, epsilon=0.000001, decay=0.1)
+                   , loss='mean_squared_error', metrics=['mean_squared_error'])
+        
+#results = model.fit(input_training, output_training, batch_size=256, epochs=1500, shuffle=True, verbose=1, validation_split=0.0, validation_data=(input_validation, output_validation))
