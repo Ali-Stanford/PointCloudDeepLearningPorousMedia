@@ -19,7 +19,16 @@
 # Version: 1.0
 
 import tensorflow as tf
-from tensorflow.keras import layers, Model, Input
+from tensorflow.python.keras.layers import Input, Dense
+from tensorflow.python.keras import optimizers
+from tensorflow.python.keras.layers import Input
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.layers import Dense, Reshape, Dropout, Flatten  
+from tensorflow.python.keras.layers import Convolution1D, MaxPooling1D, BatchNormalization
+from tensorflow.python.keras.layers import Lambda, concatenate
+from tensorflow.python.keras import regularizers
+from tensorflow.python.keras import initializers
+from tensorflow.python.keras import layers
 
 class SimplePointNet(Model):
     def __init__(self, num_points, num_classes=1):
