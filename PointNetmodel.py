@@ -16,8 +16,6 @@
 #  year={2021}, 
 #  publisher={AIP Publishing LLC}}
 
-# Version: 1.0
-
 import tensorflow as tf
 from tensorflow.python.keras.layers import Input, Dense
 from tensorflow.python.keras import optimizers
@@ -30,7 +28,7 @@ from tensorflow.python.keras import regularizers
 from tensorflow.python.keras import initializers
 from tensorflow.python.keras import layers
 
-class SimplePointNet(Model):
+class PermeabilityPointNet(Model):
     def __init__(self, num_points, num_classes=1):
         super(SimplePointNet, self).__init__()
         
@@ -61,6 +59,6 @@ class SimplePointNet(Model):
         outputs = layers.Dense(self.num_classes, activation="sigmoid")(x)
         return outputs
 
-model = SimplePointNet(num_points=NUM_POINTS)
+model = PermeabilityPointNet(num_points=NUM_POINTS)
 model.build((None, NUM_POINTS, 3))
 model.summary()
