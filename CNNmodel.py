@@ -16,12 +16,14 @@
 #  year={2021}, 
 #  publisher={AIP Publishing LLC}}
 
-# Version: 1.0
-
 import tensorflow as tf
-from tensorflow.keras.layers import Input, Convolution3D, BatchNormalization, Dense, Dropout, Flatten
-from tensorflow.keras.models import Model
-from tensorflow.keras import optimizers
+from tensorflow.python.keras.layers import Input, Dense
+from tensorflow.python.keras import optimizers
+from tensorflow.python.keras.layers import Input
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.layers import Dense, Reshape, Dropout, Flatten  
+from tensorflow.python.keras.layers import Convolution2D, Convolution3D, MaxPooling1D, BatchNormalization
+from tensorflow.python.keras.layers import Lambda, concatenate
 
 class Permeability3DCNN:
     def __init__(self, input_shape, category):
