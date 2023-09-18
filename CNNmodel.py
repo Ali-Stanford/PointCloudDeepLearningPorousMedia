@@ -1,3 +1,23 @@
+# In The Name of God
+# Implementation of PointNet for supervised learning of permeability of porous media using point clouds
+
+# Author: Ali Kashefi (kashefi@stanford.edu)
+
+# Citation:
+# If you use the code, please cite the following journal paper:
+
+# @article{kashefi2021PointNetPorousMedia, 
+#  title={Point-cloud deep learning of porous media for permeability prediction},
+#  author={Kashefi, Ali and Mukerji, Tapan},
+#  journal={Physics of Fluids}, 
+#  volume={33}, 
+#  number={9}, 
+#  pages={097109},
+#  year={2021}, 
+#  publisher={AIP Publishing LLC}}
+
+# Version: 1.0
+
 import tensorflow as tf
 from tensorflow.keras.layers import Input, Convolution3D, BatchNormalization, Dense, Dropout, Flatten
 from tensorflow.keras.models import Model
