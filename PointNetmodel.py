@@ -59,7 +59,7 @@ class PermeabilityPointNet(Model):
 #model.summary()
 
 #model.compile(optimizers.Adam(learning_rate=0.1, beta_1=0.9, beta_2=0.999, epsilon=0.000001)
-                   , loss='mean_squared_error', metrics=['mean_squared_error'])
+#                   , loss='mean_squared_error', metrics=['mean_squared_error'])
 
 # Generate fake data
 #n_training = 100
