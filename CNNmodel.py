@@ -57,12 +57,8 @@ class Permeability3DCNN:
 
         return Model(inputs=input_points, outputs=prediction)
 
-    def summary(self):
-        self.model.summary()
-
 # Example usage
 #cnn3d_model = Permeability3DCNN(input_shape=(64, 64, 64, 1), category=1)
-#cnn3d_model.summary()
 #model = cnn3d_model.model 
 
 #model.compile(optimizers.Adam(lr=LRT, beta_1=0.9, beta_2=0.999, epsilon=0.000001, decay=0.1)
