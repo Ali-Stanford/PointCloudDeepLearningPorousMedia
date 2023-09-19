@@ -16,21 +16,15 @@
 #  year={2021}, 
 #  publisher={AIP Publishing LLC}}
 
+import numpy as np
 import tensorflow as tf
-from tensorflow.python.keras.layers import Input, Dense
-from tensorflow.python.keras import optimizers
-from tensorflow.python.keras.layers import Input
-from tensorflow.python.keras.models import Model
-from tensorflow.python.keras.layers import Dense, Reshape, Dropout, Flatten  
-from tensorflow.python.keras.layers import Convolution1D, MaxPooling1D, BatchNormalization
-from tensorflow.python.keras.layers import Lambda, concatenate
-from tensorflow.python.keras import regularizers
-from tensorflow.python.keras import initializers
-from tensorflow.python.keras import layers
+from tensorflow.keras.layers import Input, Dense, Convolution1D, MaxPooling1D, BatchNormalization, Dropout, Lambda
+from tensorflow.keras import optimizers, regularizers, initializers, layers
+from tensorflow.keras.models import Model
 
 class PermeabilityPointNet(Model):
     def __init__(self, num_points, num_classes=1):
-        super(SimplePointNet, self).__init__()
+        super(PermeabilityPointNet, self).__init__() 
         
         self.num_points = num_points
         self.num_classes = num_classes
@@ -60,13 +54,21 @@ class PermeabilityPointNet(Model):
         return outputs
 
 # Example usage
-#model = PermeabilityPointNet(num_points=n_points)
-#model.build((None, n_points, 3))
+n_points = 1024
+n_training = 100
+n_validation = 20
 
-#model.compile(optimizers.Adam(lr=0.1, beta_1=0.9, beta_2=0.999, epsilon=0.000001, decay=0.1)
-#                   , loss='mean_squared_error', metrics=['mean_squared_error'])
+model = PermeabilityPointNet(num_points=n_points)
+model.build((None, n_points, 3))
 
-#input_training= zeros([n_training,n_points,3],dtype='f')
-#output_training= zeros([n_training],dtype='f')
+model.compile(optimizers.Adam(learning_rate=0.1, beta_1=0.9, beta_2=0.999, epsilon=0.000001)
+                   , loss='mean_squared_error', metrics=['mean_squared_error'])
 
-#results = model.fit(input_training, output_training, batch_size=256, epochs=1500, shuffle=True, verbose=1, validation_split=0.0, validation_data=(input_validation, output_validation))
+# Generate fake data
+input_training = np.random.randn(n_training, n_points, 3)
+output_training = np.random.randn(n_training)
+
+input_validation = np.random.randn(n_validation, n_points, 3)
+output_validation = np.random.randn(n_validation)
+
+results = model.fit(input_training, output_training, batch_size=256, epochs=1500, shuffle=True, verbose=1, validation_data=(input_validation, output_validation))
