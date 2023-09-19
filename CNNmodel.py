@@ -61,10 +61,10 @@ class Permeability3DCNN:
 #cnn3d_model = Permeability3DCNN(input_shape=(64, 64, 64, 1), category=1)
 #model = cnn3d_model.model 
 
-#model.compile(optimizers.Adam(lr=LRT, beta_1=0.9, beta_2=0.999, epsilon=0.000001, decay=0.1)
+#model.compile(optimizers.Adam(lr=0.01, beta_1=0.9, beta_2=0.999, epsilon=0.000001, decay=0.1)
 #                   , loss='mean_squared_error', metrics=['mean_squared_error'])
 
 #input_training = zeros([n_training,64,64,64,1],dtype='i')
 #output_training = zeros([n_training],dtype='f') 
 
-#results = model.fit(input_training, output_training, batch_size=Nb, epochs=Np, shuffle=True, verbose=1, validation_split=0.0, validation_data=(input_validation, output_validation))
+#results = model.fit(input_training, output_training, batch_size=256, epochs=1500, shuffle=True, verbose=1, validation_split=0.0, validation_data=(input_validation, output_validation))
